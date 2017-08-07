@@ -9,10 +9,13 @@
 #import "ViewController.h"
 #import "UIView+Extension.h"
 #import "UIImageView+LBBlurredImage.h"
+#import "Masonry.h"
 
 #define FONT_SIZE 18
 #define kWIDTH [UIScreen mainScreen].bounds.size.width
 #define RGB(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define Factor_6(A) kWIDTH / 375.0 * (A)
+
 
 static NSString *const TestBURL = @"alipay://";
 
@@ -28,7 +31,7 @@ static NSString *const TestBURL = @"alipay://";
     [super viewDidLoad];
     
     UIImageView *bgImgView = [[UIImageView alloc] init];
-    [bgImgView setFrame:self.view.bounds];
+//    [bgImgView setFrame:self.view.bounds];
     [bgImgView setUserInteractionEnabled:YES];
     [bgImgView setContentMode:UIViewContentModeScaleAspectFill];
 
@@ -39,7 +42,7 @@ static NSString *const TestBURL = @"alipay://";
     UIImageView *headImgView = [[UIImageView alloc] init];
     [bgImgView addSubview:({
         [headImgView setUserInteractionEnabled:YES];
-        [headImgView setFrame:(CGRect){bgImgView.centerX-(kWIDTH/1.28)/2, bgImgView.centerY-(kWIDTH/1.28)*0.8, kWIDTH/1.28, (kWIDTH/1.28)*1.18}];
+//        [headImgView setFrame:(CGRect){bgImgView.centerX-(kWIDTH/1.28)/2, bgImgView.centerY-(kWIDTH/1.28)*0.8, kWIDTH/1.28, (kWIDTH/1.28)*1.18}];
         [headImgView setImage:[UIImage imageNamed:@"huba.jpeg"]];
         [headImgView setContentMode:UIViewContentModeScaleAspectFill];
 //        [headImgView.layer setCornerRadius:CGRectGetHeight(headImgView.frame)*0.5];
@@ -51,11 +54,24 @@ static NSString *const TestBURL = @"alipay://";
         headImgView;
     })];
     
+    [bgImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(self.view);
+    }];
+    
+    [headImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgImgView.mas_left).mas_offset(Factor_6(30));
+        make.top.equalTo(bgImgView.mas_top).mas_offset(Factor_6(50) + 64);
+        make.right.equalTo(bgImgView.mas_right).mas_offset(-Factor_6(30));
+        make.height.mas_equalTo(Factor_6(310));
+    }];
+    
+    
+    
     //关闭
     UIImageView *closeImgView = [[UIImageView alloc] init];
     [bgImgView addSubview:({
         [closeImgView setUserInteractionEnabled:YES];
-        [closeImgView setFrame:(CGRect){headImgView.x-35, headImgView.y+headImgView.frame.size.height+120, bgImgView.size.width/2-10, 50}];
+//        [closeImgView setFrame:(CGRect){headImgView.x-35, headImgView.y+headImgView.frame.size.height+120, bgImgView.size.width/2-10, 50}];
         [closeImgView setImage:[UIImage imageNamed:@"a_close.png"]];
         [closeImgView setContentMode:UIViewContentModeScaleAspectFill];
         //        [headImgView.layer setCornerRadius:CGRectGetHeight(headImgView.frame)*0.5];
@@ -66,6 +82,15 @@ static NSString *const TestBURL = @"alipay://";
                                            initWithTarget:self action:@selector(closeImgViewClick:)]];
         closeImgView;
     })];
+    
+    
+    [closeImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgImgView.mas_left).mas_offset(Factor_6(35));
+        make.top.equalTo(headImgView.mas_bottom).mas_offset(Factor_6(120));
+        make.width.mas_equalTo(Factor_6(150));
+        make.height.mas_equalTo(Factor_6(50));
+        
+    }];
     
     //支付宝
     UIImageView *alipayImgView = [[UIImageView alloc] init];
@@ -83,6 +108,29 @@ static NSString *const TestBURL = @"alipay://";
         alipayImgView;
     })];
     
+    [alipayImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(bgImgView.mas_right).mas_offset(-Factor_6(35));
+        make.top.equalTo(headImgView.mas_bottom).mas_offset(Factor_6(120));
+        make.width.mas_equalTo(Factor_6(150));
+        make.height.mas_equalTo(Factor_6(50));
+        
+    }];
+    
+    
+    
+    // 签名
+//    [bgImgView addSubview:({
+//        UILabel *lable = [[UILabel alloc] init];
+//        [lable setText:@"我是测试签名"];
+//        [lable setTextColor:[UIColor greenColor]];
+//        [lable setTextAlignment:NSTextAlignmentCenter];
+//        [lable setFont:[UIFont systemFontOfSize:FONT_SIZE]];
+//        [lable setBackgroundColor:[UIColor orangeColor]];
+//        CGSize lableSize = [lable.text boundingRectWithSize:CGSizeMake(MAXFLOAT,MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:FONT_SIZE]} context:nil].size;
+//        [lable setFrame:CGRectMake((kWIDTH*0.5)-(lableSize.width*0.5),CGRectGetMaxY(headImgView.frame)+15, lableSize.width, lableSize.height)];
+//        [lable sizeToFit];
+//        lable;
+//    })];
 }
 
 
