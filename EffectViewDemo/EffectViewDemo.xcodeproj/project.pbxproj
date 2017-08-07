@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2898B01F2F6F1200D0C4BF /* a_alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2898AE1F2F6F1200D0C4BF /* a_alipay.png */; };
+		4C2898B11F2F6F1300D0C4BF /* a_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2898AF1F2F6F1200D0C4BF /* a_close.png */; };
 		A2061B1F1C47D0650005BFF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2061B1E1C47D0650005BFF4 /* main.m */; };
 		A2061B221C47D0650005BFF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2061B211C47D0650005BFF4 /* AppDelegate.m */; };
 		A2061B251C47D0650005BFF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2061B241C47D0650005BFF4 /* ViewController.m */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2898AE1F2F6F1200D0C4BF /* a_alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_alipay.png; sourceTree = "<group>"; };
+		4C2898AF1F2F6F1200D0C4BF /* a_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_close.png; sourceTree = "<group>"; };
 		A2061B1A1C47D0650005BFF4 /* EffectViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2061B1E1C47D0650005BFF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2061B201C47D0650005BFF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				A2061B291C47D0650005BFF4 /* Assets.xcassets */,
 				A2061B2B1C47D0650005BFF4 /* LaunchScreen.storyboard */,
 				A2061B2E1C47D0650005BFF4 /* Info.plist */,
+				4C2898AE1F2F6F1200D0C4BF /* a_alipay.png */,
+				4C2898AF1F2F6F1200D0C4BF /* a_close.png */,
 				A2061B1D1C47D0650005BFF4 /* Supporting Files */,
 			);
 			path = EffectViewDemo;
@@ -139,6 +145,8 @@
 				TargetAttributes = {
 					A2061B191C47D0650005BFF4 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = VZF44W2ZC2;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -165,7 +173,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2898B11F2F6F1300D0C4BF /* a_close.png in Resources */,
 				A2061B2D1C47D0650005BFF4 /* LaunchScreen.storyboard in Resources */,
+				4C2898B01F2F6F1200D0C4BF /* a_alipay.png in Resources */,
 				A2061B3D1C47D14F0005BFF4 /* huba.jpeg in Resources */,
 				A2061B2A1C47D0650005BFF4 /* Assets.xcassets in Resources */,
 				A2061B281C47D0650005BFF4 /* Main.storyboard in Resources */,
@@ -295,11 +305,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Think Expand Combine  Crowd Technology Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Think Expand Combine  Crowd Technology Co.,Ltd";
+				DEVELOPMENT_TEAM = VZF44W2ZC2;
 				INFOPLIST_FILE = EffectViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.Arvin.EffectViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmstop.cn.Arvin.EffectViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8a57beca-bd15-4a57-b529-a5a36010c12d";
+				PROVISIONING_PROFILE_SPECIFIER = cmstopcustomerTestProv;
 			};
 			name = Debug;
 		};
@@ -307,11 +322,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Think Expand Combine  Crowd Technology Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Think Expand Combine  Crowd Technology Co.,Ltd";
+				DEVELOPMENT_TEAM = VZF44W2ZC2;
 				INFOPLIST_FILE = EffectViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.Arvin.EffectViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmstop.cn.Arvin.EffectViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8a57beca-bd15-4a57-b529-a5a36010c12d";
+				PROVISIONING_PROFILE_SPECIFIER = cmstopcustomerTestProv;
 			};
 			name = Release;
 		};

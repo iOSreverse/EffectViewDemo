@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4E5D19D9D3600878948A22A6B44C608AC3299FC5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2C48AEED1CB755BCF975B343C017A30BD4D2CABA" : 9223372036854775807,
+    "4E5D19D9D3600878948A22A6B44C608AC3299FC5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "55E75AF1-0F45-46D1-8D91-42654F4092D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2C48AEED1CB755BCF975B343C017A30BD4D2CABA" : "..",
+    "4E5D19D9D3600878948A22A6B44C608AC3299FC5" : "EffectViewDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EffectViewDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EffectViewDemo\/EffectViewDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.meitiyun.org:IOS\/Cmstopmeitiban_chaowen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C48AEED1CB755BCF975B343C017A30BD4D2CABA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSreverse\/EffectViewDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4E5D19D9D3600878948A22A6B44C608AC3299FC5"
+    }
+  ]
+}
